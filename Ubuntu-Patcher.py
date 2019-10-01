@@ -6,11 +6,13 @@ import time
 import wget
 import shutil
 
+##Variables
 homedir = os.path.expanduser("~")
-print(homedir)
 systemInfo = os.uname()
 KernelURL = 'https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.3.1.tar.xz'
 PatchURL = 'https://clbin.com/VCiYJ'
+
+##Script Start
 print ("This script will download and compile the latest linux")
 input("Press ENTER to continue...")
 
@@ -51,7 +53,6 @@ time.sleep(1)
 wget.download(PatchURL, homedir+'/Downloads/kernel/linux')
 currentdir = os.getcwd()
 shutil.move('VCiYJ', 'pci.patch')
-print(currentdir)
 os.system("patch -p1 < pci.patch")
 time.sleep(1)
 
@@ -79,4 +80,3 @@ while answer not in ("yes", "no"):
          exit()
     else:
     	print("Please enter yes or no.")
-##############################################################
