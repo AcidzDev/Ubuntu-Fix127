@@ -9,7 +9,7 @@ import shutil
 ##Variables
 homedir = os.path.expanduser("~")
 systemInfo = os.uname()
-KernelURL = 'https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.3.1.tar.xz'
+KernelURL = 'https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.3.5.tar.xz'
 PatchURL = 'https://clbin.com/VCiYJ'
 
 ##Script Start
