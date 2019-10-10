@@ -1,6 +1,6 @@
 # Ubuntu-Fix127
 
-Script to download and compile the current linux kernel(5.3.1) and apply the Header127 Patch for people who are experiencing the Header 127 bug with AMD Cards with the UEFI reset bug 
+Script to download and compile the current linux kernel(5.3.5) and apply the Header127 Patch for people who are experiencing the Header 127 bug with AMD Cards with the UEFI reset bug 
 
 To run this script you will need python3 and pip3
 
