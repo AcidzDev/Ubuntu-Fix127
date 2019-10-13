@@ -4,7 +4,7 @@ Script to download and compile the current linux kernel(5.3.5) and apply the Hea
 
 To run this script you will need python3 and pip3
 
-``` sudo apt install python-3 python3-pip ```
+``` sudo apt install python3 python3-pip ```
 ``` pip3 install wget ```
 Check which version of python is rubnning on your system with:
 ``` python --version ```

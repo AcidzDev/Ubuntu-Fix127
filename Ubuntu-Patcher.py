@@ -32,8 +32,7 @@ time.sleep(1)
 ##Enable scoure
 print("Enable build sources")
 time.sleep(1)
-os.system("sudo echo 'deb-src http://archive.ubuntu.com/ubuntu disco main /etc/apt/sources.list'")
-os.system("sudo echo 'deb-src http://archive.ubuntu.com/ubuntu disco-updates main /etc/apt/sources.list'")
+os.system("sudo sed -i '/deb-src/s/^# //' /etc/apt/sources.list && sudo apt update")
 os.system("sudo apt update")
 time.sleep(1)
 
@@ -44,7 +43,7 @@ os.system("sudo apt install kernel-package libncurses5-dev bzip2 fakeroot libncu
 ##Extracting Kernel
 print("Extracting kernel")
 os.system("tar -xvf linux-*.tar.xz")
-os.system("ln -s linux-5.3.1 linux")
+os.system("ln -s linux-5.3.5 linux")
 os.chdir(homedir+"/Downloads/kernel/linux")
 
 ##Applying Patch
