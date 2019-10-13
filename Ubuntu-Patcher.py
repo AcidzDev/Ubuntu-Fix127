@@ -63,7 +63,8 @@ os.system('clear')
 time.sleep(1)
 print("Are you ready to compile the kernel\n")
 input("Press ENTER to continue...")
-os.system("fakeroot make-kpkg -j$(nproc) --initrd --append-to-version=pci-patched kernel_image kernel_headers")
+os.system("make localmodconfig")
+os.system("make deb-pkg -j$(nproc)")
 
 ##Install compile kernel
 os.system('clear')
